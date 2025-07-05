@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Palette, Server, Smartphone } from "lucide-react";
 
 export function Skills() {
@@ -12,9 +12,11 @@ export function Skills() {
         "Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "Vue.js",
         "HTML5",
         "CSS3",
+        "CMS",
+        "Contentful",
+        "Umbraco",
       ],
     },
     {
@@ -22,12 +24,14 @@ export function Skills() {
       icon: <Server className="h-6 w-6" />,
       skills: [
         "Node.js",
-        "Python",
-        "PostgreSQL",
+        "Express.js",
+        "Serverless Functions",
+        "MySQL",
         "MongoDB",
         "REST APIs",
         "GraphQL",
         "Docker",
+        "PHP",
       ],
     },
     {
@@ -45,15 +49,7 @@ export function Skills() {
     {
       title: "Mobile & Tools",
       icon: <Smartphone className="h-6 w-6" />,
-      skills: [
-        "React Native",
-        "Git",
-        "AWS",
-        "Vercel",
-        "Firebase",
-        "Jest",
-        "Cypress",
-      ],
+      skills: ["React Native", "Git", "Vercel", "Firebase", "Jest", "Cypress"],
     },
   ];
 

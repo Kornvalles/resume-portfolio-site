@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -18,11 +18,11 @@ export function Hero() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              John Doe
+              Mikkel Kornval Christoffersen
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Full Stack Developer & UI/UX Designer
+            Full Stack Developer & Mobile App Developer
           </p>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
             I create beautiful, functional, and user-centered digital
@@ -34,7 +34,7 @@ export function Hero() {
             <Button size="lg" onClick={() => scrollToSection("projects")}>
               View My Work
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" disabled>
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Button>

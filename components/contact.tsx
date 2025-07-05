@@ -2,12 +2,12 @@
 
 import type React from "react";
 
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { useState } from "react";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -20,6 +20,22 @@ export function Contact() {
     e.preventDefault();
     // Handle form submission here
     console.log("Form submitted:", formData);
+    // You can send the data to your backend or an email service here
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // Optionally handle response data
+        console.log("API response:", data);
+      })
+      .catch((error) => {
+        console.error("Error submitting contact form:", error);
+      });
     // Reset form
     setFormData({ name: "", email: "", message: "" });
   };
@@ -44,7 +60,7 @@ export function Contact() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-semibold mb-6">
-                {"Let's work together"}
+                Let's work together
               </h3>
               <p className="text-muted-foreground mb-8">
                 I'm always interested in new opportunities and exciting
@@ -55,15 +71,15 @@ export function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-orange-500 mr-3" />
-                  <span>john.doe@example.com</span>
+                  <span>mikkel@kornval.com</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-orange-500 mr-3" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+45 3167 5555</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-orange-500 mr-3" />
-                  <span>San Francisco, CA</span>
+                  <span>Copenhagen</span>
                 </div>
               </div>
             </div>
@@ -74,10 +90,13 @@ export function Contact() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  <input style={{ display: "none" }} name="website"></input>
                   <div>
                     <Input
                       name="name"
                       placeholder="Your Name"
+                      autoCapitalize="words"
+                      autoComplete="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
@@ -87,6 +106,7 @@ export function Contact() {
                     <Input
                       name="email"
                       type="email"
+                      autoComplete="email"
                       placeholder="Your Email"
                       value={formData.email}
                       onChange={handleChange}
@@ -96,6 +116,7 @@ export function Contact() {
                   <div>
                     <Textarea
                       name="message"
+                      autoComplete="off"
                       placeholder="Your Message"
                       rows={5}
                       value={formData.message}

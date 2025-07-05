@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,12 +53,14 @@ export function Header() {
             <button
               onClick={() => scrollToSection("experience")}
               className="text-muted-foreground hover:text-foreground transition-colors"
+              disabled
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection("projects")}
               className="text-muted-foreground hover:text-foreground transition-colors"
+              disabled
             >
               Projects
             </button>
