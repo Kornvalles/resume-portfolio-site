@@ -50,7 +50,7 @@ export function Hero() {
           <div className="flex justify-center space-x-6">
             <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
               <a
-                href="https://github.com/MikkelKC"
+                href="https://github.com/Kornvalles"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -61,7 +61,7 @@ export function Hero() {
             </Button>
             <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
               <a
-                href="https://www.linkedin.com/in/mikkel-kornval/"
+                href="https://www.linkedin.com/in/mikkel-kornval-christoffersen-b57032161/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
