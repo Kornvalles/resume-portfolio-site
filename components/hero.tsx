@@ -11,6 +11,13 @@ export function Hero() {
     }
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/files/resume.pdf"; // relative to /public
+    link.download = "resume.pdf";    // suggested filename
+    link.click();
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted/20">
       <div className="container mx-auto px-4 text-center">
@@ -34,7 +41,7 @@ export function Hero() {
             <Button size="lg" onClick={() => scrollToSection("projects")}>
               View My Work
             </Button>
-            <Button variant="outline" size="lg" disabled>
+            <Button onClick={handleDownload} variant="outline" size="lg">
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Button>
