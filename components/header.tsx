@@ -8,6 +8,8 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const shouldShowBackground = isScrolled || isMenuOpen;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -27,7 +29,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+        shouldShowBackground
           ? "bg-background/95 backdrop-blur-sm border-b"
           : "bg-transparent"
       }`}
@@ -73,6 +75,8 @@ export function Header() {
             size="icon"
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMenuOpen ? (
               <X className="h-5 w-5" />
@@ -84,7 +88,10 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t">
+          <div
+            id="mobile-navigation"
+            className="md:hidden mt-4 pb-4 border-t"
+          >
             <div className="flex flex-col space-y-4 pt-4">
               <button
                 onClick={() => scrollToSection("about")}
