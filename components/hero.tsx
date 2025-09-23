@@ -48,17 +48,33 @@ export function Hero() {
           </div>
 
           <div className="flex justify-center space-x-6">
-            <Button variant="ghost" size="icon" className="h-12 w-12">
-              <Github className="h-6 w-6" />
-              <span className="sr-only">GitHub</span>
+            <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
+              <a
+                href="https://github.com/MikkelKC"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="h-6 w-6" />
+                <span className="sr-only">GitHub</span>
+              </a>
             </Button>
-            <Button variant="ghost" size="icon" className="h-12 w-12">
-              <Linkedin className="h-6 w-6" />
-              <span className="sr-only">LinkedIn</span>
+            <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
+              <a
+                href="https://www.linkedin.com/in/mikkel-kornval/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
             </Button>
-            <Button variant="ghost" size="icon" className="h-12 w-12">
-              <Mail className="h-6 w-6" />
-              <span className="sr-only">Email</span>
+            <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
+              <a href="mailto:mikkel@kornval.com" aria-label="Email">
+                <Mail className="h-6 w-6" />
+                <span className="sr-only">Email</span>
+              </a>
             </Button>
           </div>
         </div>
