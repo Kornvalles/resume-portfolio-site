@@ -76,7 +76,7 @@ const html = `<!DOCTYPE html>
     </div>
 
     <h2>Who we are</h2>
-    <p>Volo Cardio ("Volo", "the app", "we") is a fitness app for iPhone and Apple Watch that reads your VO<sub>2</sub> Max — Apple's "Cardio Fitness" measurement — and shows where it sits across five fitness levels. It is published by Mikkel Kornval Christoffersen. You can reach us at <a href="mailto:mikkel@kornval.com">mikkel@kornval.com</a>.</p>
+    <p>Volo Cardio ("Volo", "the app", "we") is a fitness app for iPhone and Apple Watch that reads your VO<sub>2</sub> Max — Apple's "Cardio Fitness" measurement — and shows where it sits across five fitness levels. It is published by Mikkel Kornval Christoffersen. You can reach us at <a href="mailto:support@kornval.com">support@kornval.com</a>.</p>
 
     <h2>What data the app accesses</h2>
     <p>With your permission, Volo reads the following from Apple Health, and <strong>only reads</strong> — it never writes, changes, or deletes anything in Apple Health:</p>
@@ -109,7 +109,7 @@ const html = `<!DOCTYPE html>
     <p>If this policy changes, we will update the effective date above and post the revised version at this URL. Material changes will also be reflected in an app update.</p>
 
     <h2>Contact</h2>
-    <p>Questions about privacy or this policy? Email <a href="mailto:mikkel@kornval.com">mikkel@kornval.com</a>.</p>
+    <p>Questions about privacy or this policy? Email <a href="mailto:support@kornval.com">support@kornval.com</a>.</p>
 
     <footer>Volo Cardio · com.kornval.volo · © 2026 Mikkel Kornval Christoffersen</footer>
   </div>

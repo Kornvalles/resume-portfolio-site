@@ -76,7 +76,7 @@ const html = `<!DOCTYPE html>
     <p class="lede">Volo Cardio reads your VO<sub>2</sub> Max — Apple's "Cardio Fitness" measurement — from Apple Health and shows where it sits across five fitness levels. Below are answers to the most common questions. If yours isn't here, we're happy to help.</p>
 
     <div class="contact">
-      <b>Get in touch:</b> Email <a href="mailto:mikkel@kornval.com?subject=Volo%20Cardio%20support">mikkel@kornval.com</a> and we'll get back to you, usually within a couple of days.
+      <b>Get in touch:</b> Email <a href="mailto:support@kornval.com?subject=Volo%20Cardio%20support">support@kornval.com</a> and we'll get back to you, usually within a couple of days.
     </div>
 
     <h2>Frequently asked questions</h2>
@@ -111,7 +111,7 @@ const html = `<!DOCTYPE html>
     <p>Because Volo stores nothing off your device, there's nothing for us to delete. To remove the app's local settings, simply delete the app — your Apple Health records are untouched and remain in Apple Health. You can also revoke Volo's Health access at any time from Settings.</p>
 
     <h2>Still need help?</h2>
-    <p>Email <a href="mailto:mikkel@kornval.com?subject=Volo%20Cardio%20support">mikkel@kornval.com</a> with your question and, if it helps, which iPhone and Apple Watch you're using. We read every message.</p>
+    <p>Email <a href="mailto:support@kornval.com?subject=Volo%20Cardio%20support">support@kornval.com</a> with your question and, if it helps, which iPhone and Apple Watch you're using. We read every message.</p>
 
     <footer>Volo Cardio · com.kornval.volo · © 2026 Mikkel Kornval Christoffersen · <a href="https://kornval.com/volo/privacy">Privacy Policy</a></footer>
   </div>
